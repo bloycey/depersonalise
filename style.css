@@ -94,7 +94,7 @@ a:hover {
     color: coral !important;
 }
 
-#cityDiv {
+#translateDiv {
     width: 100%;
     margin: auto;
     text-align: center;
@@ -108,7 +108,7 @@ textarea {
     margin-top: 50px;
 }
 
-#submitCity {
+#submitTranslate {
     height:40px;
     font-size: 15px;
     font-weight: bold;
@@ -134,7 +134,7 @@ textarea {
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
 
-    #cityDiv {
+    #translateDiv {
         width: 65%;
     }
         
