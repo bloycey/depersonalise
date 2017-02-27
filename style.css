@@ -132,6 +132,10 @@ textarea {
 .btn-group.bootstrap-select {
     width: 170px !important;
 }
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+    color: #fff !important;
+}
   
 
 /* Custom, iPhone Retina */ 
