@@ -1,35 +1,11 @@
 var translate;
 var currentTranslation;
-var languageOne;
-var languageTwo;
-var languageThree;
-var languageOutput;
-var languageOneText;
-var languageTwoText;
-var languageThreeText;
-var languageOutputText;
 
 $(document).ready(function(){
     
    $("#submitTranslate").click(function(){
        translate = $("#translate").val();
-       
-       languageOne = $("#language1").val();
-       languageTwo = $("#language2").val();
-       languageThree = $("#language3").val();
-       languageOutput = $("#language-output").val();
-       
-       languageOneText = $("#language1 :selected").text();
-       languageTwoText = $("#language2 :selected").text();
-       languageThreeText = $("#language3 :selected").text();
-       languageOutputText = $("#language-output :selected").text();
-       
-       $("#firstTranslationTitle").html("Round One: " + languageOneText);
-       $("#secondTranslationTitle").html("Round Two: " + languageTwoText);
-       $("#thirdTranslationTitle").html("Round Three: " + languageThreeText);
-       $("#outputTranslationTitle").html("Output: " + languageOutputText);
-       
-       return getTranslation1(languageOne);
+       return getTranslation1();
        
    }) 
    
@@ -45,15 +21,14 @@ $(document).ready(function(){
     
 });
 
-
-function getTranslation1(language) {
+function getTranslation1() {
     
    $("#error").html('');
     
     if(translate != ''){
         
         $.ajax({
-           url: 'https://translate.yandex.net/api/v1.5/tr.json/translate?lang=' + language + '&key=trnsl.1.1.20170226T033130Z.74a31ef2d1d851c0.4b9ad08deba7dd5c69334bd6121ed9e9fd07d154&text=' + translate,
+           url: 'https://translate.yandex.net/api/v1.5/tr.json/translate?lang=fr&key=trnsl.1.1.20170226T033130Z.74a31ef2d1d851c0.4b9ad08deba7dd5c69334bd6121ed9e9fd07d154&text=' + translate,
             type: "GET",
             dataType: "jsonp", 
             success: function(data){
@@ -64,7 +39,7 @@ function getTranslation1(language) {
                 $("#firstTranslation").html(display1);
                 
                 
-                getTranslation2(languageTwo, currentTranslation);
+                getTranslation2("de", currentTranslation);
             }  
     
     
@@ -92,7 +67,7 @@ function getTranslation2(language, inputText) {
                 $("#secondTranslation").html(display2);
                 
                 
-                getTranslation3(languageThree, currentTranslation);
+                getTranslation3("af", currentTranslation);
                 
             }  
     
@@ -119,7 +94,7 @@ function getTranslation3(language, inputText) {
                 
                 $("#thirdTranslation").html(display3);
                 
-                getTranslation4(languageOutput, currentTranslation);
+                getTranslation4("en", currentTranslation);
             
                 
             }  
@@ -145,7 +120,7 @@ function getTranslation4(language, inputText) {
                 var display4 = firstResults(data);
                 results1 = data.text;
                 
-                $("#outputTranslation").html(display4);
+                $("#fourthTranslation").html(display4);
                     
             }  
     
