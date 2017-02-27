@@ -6,6 +6,12 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -104,7 +110,7 @@ a:hover {
 textarea {
     width: 90vw;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto !important;
     margin-top: 50px;
     padding: 10px;
     border-radius: 5px;
@@ -118,6 +124,7 @@ textarea {
     font-size: 15px;
     font-weight: bold;
     margin-top: 25px;
+    margin-bottom: 70px;
 }
 
 #fourthTranslation {
@@ -135,6 +142,7 @@ textarea {
 
 .bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
     color: #fff !important;
+    margin-bottom: 10px;
 }
   
 
