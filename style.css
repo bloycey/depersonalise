@@ -109,6 +109,8 @@ textarea {
 }
 
 #submitTranslate {
+    margin: 0 auto;
+    display: block;
     height:40px;
     font-size: 15px;
     font-weight: bold;
@@ -119,6 +121,14 @@ textarea {
     padding-bottom: 100px;
 }
 
+.row.translation-picker {
+    display: inline-block !important;
+    margin-top: 15px !important;
+}
+
+.btn-group.bootstrap-select {
+    width: 170px !important;
+}
   
 
 /* Custom, iPhone Retina */ 
